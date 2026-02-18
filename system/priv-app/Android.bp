@@ -1,0 +1,25 @@
+android_app_import {
+    name: "MiuiCamera",
+    certificate: "platform",
+    privileged: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    overrides: [
+        "SnapdragonCamera",
+        "Snap",
+        "Camera2",
+        "Aperture",
+    ],
+    apk: "MiuiCamera/MiuiCamera.apk",
+}
+
+android_app_import {
+    name: "MiuiExtraPhoto",
+    certificate: "platform",
+    privileged: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    apk: "MiuiExtraPhoto/MiuiExtraPhoto.apk",
+}
