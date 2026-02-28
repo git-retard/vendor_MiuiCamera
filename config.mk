@@ -27,6 +27,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     MiuiCamera \
     MiuiCameraOverlay \
+    MiuiExtraPhoto
 
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.camera.enableAdvanceFeatures=0x3E7 \
