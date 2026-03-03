@@ -16,18 +16,40 @@ VENDOR_PATH := vendor/MiuiCamera
 
 RELAX_USES_LIBRARY_CHECK := true
 
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(VENDOR_PATH)/system/etc,system/etc) \
-    $(call find-copy-subdir-files,*,$(VENDOR_PATH)/product/etc,product/etc) \
-    $(call find-copy-subdir-files,*,$(VENDOR_PATH)/system/priv-app/MiuiCamera/lib/arm64,system/priv-app/MiuiCamera/lib/arm64) \
-    $(call find-copy-subdir-files,*,$(VENDOR_PATH)/system/priv-app/MiuiExtraPhoto/lib/arm64,system/priv-app/MiuiExtraPhoto/lib/arm64) \
-    $(call find-copy-subdir-files,*,$(VENDOR_PATH)/system/lib64,system/lib64) \
-    $(call find-copy-subdir-files,*,$(VENDOR_PATH)/vendor/etc,vendor/etc) 
+# PRODUCT_COPY_FILES += \
+  #  $(call find-copy-subdir-files,*,$(VENDOR_PATH)/system/etc,system/etc) \
+   # $(call find-copy-subdir-files,*,$(VENDOR_PATH)/product/etc,product/etc) \
+    #$(call find-copy-subdir-files,*,$(VENDOR_PATH)/system/priv-app/MiuiCamera/lib/arm64,system/priv-app/MiuiCamera/lib/arm64) \
+ #   $(call find-copy-subdir-files,*,$(VENDOR_PATH)/system/priv-app/MiuiExtraPhoto/lib/arm64,system/priv-app/MiuiExtraPhoto/lib/arm64) \
+  #  $(call find-copy-subdir-files,*,$(VENDOR_PATH)/system/lib64,system/lib64) \
+   # $(call find-copy-subdir-files,*,$(VENDOR_PATH)/vendor/etc,vendor/etc) 
 
 PRODUCT_PACKAGES += \
     MiuiCamera \
     MiuiCameraOverlay \
     MiuiExtraPhoto
+    
+PRODUCT_PACKAGES += \
+    libcamera_algoup_jni_xiaomi \
+    libmialgoengine \
+    libcamera_jpegutil_jni_xiaomi \
+    libcamera_mianode_jni_xiaomi \
+    libdoc_photo_cxx_shared \
+    libdoc_photo \
+    libgallery_arcsoft_dualcam_refocus \
+    libgallery_arcsoft_portrait_lighting_c \
+    libgallery_arcsoft_portrait_lighting \
+    libgallery_mpbase \
+    libmegvii_bokeh_jni \
+    libmibokeh_gallery \
+    libmisr \
+    libmotion_photo_cxx_shared \
+    libmotion_photo_mace \
+    libmotion_photo \
+    librefocus_mibokeh \
+    librefocus \
+    libselection \
+    libwa_refocus_extraphoto
 
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.camera.enableAdvanceFeatures=0x3E7 \
