@@ -1,0 +1,172 @@
+cc_prebuilt_library_shared {
+    name: "libcamera_algoup_jni_xiaomi",
+    srcs: ["system/lib64/libcamera_algoup_jni.xiaomi.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+
+
+cc_prebuilt_library_shared {
+    name: "libcamera_jpegutil_jni_xiaomi",
+    srcs: ["system/lib64/libcamera_jpegutil_jni.xiaomi.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_mianode_jni_xiaomi",
+    srcs: ["system/lib64/libcamera_mianode_jni.xiaomi.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libdoc_photo_cxx_shared",
+    srcs: ["system/lib64/libdoc_photo_c++_shared.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libdoc_photo",
+    srcs: ["system/lib64/libdoc_photo.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libgallery_arcsoft_dualcam_refocus",
+    srcs: ["system/lib64/libgallery_arcsoft_dualcam_refocus.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libgallery_arcsoft_portrait_lighting_c",
+    srcs: ["system/lib64/libgallery_arcsoft_portrait_lighting_c.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libgallery_arcsoft_portrait_lighting",
+    srcs: ["system/lib64/libgallery_arcsoft_portrait_lighting.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libgallery_mpbase",
+    srcs: ["system/lib64/libgallery_mpbase.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libmegvii_bokeh_jni",
+    srcs: ["system/lib64/libmegvii_bokeh_jni.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libmibokeh_gallery",
+    srcs: ["system/lib64/libmibokeh_gallery.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libmisr",
+    srcs: ["system/lib64/libmisr.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libmotion_photo_cxx_shared",
+    srcs: ["system/lib64/libmotion_photo_c++_shared.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libmotion_photo_mace",
+    srcs: ["system/lib64/libmotion_photo_mace.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libmotion_photo",
+    srcs: ["system/lib64/libmotion_photo.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "librefocus_mibokeh",
+    srcs: ["system/lib64/librefocus_mibokeh.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "librefocus",
+    srcs: ["system/lib64/librefocus.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libselection",
+    srcs: ["system/lib64/libselection.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
+
+cc_prebuilt_library_shared {
+    name: "libwa_refocus_extraphoto",
+    srcs: ["system/lib64/libwa_refocus_extraphoto.so"],
+    compile_multilib: "64",
+    strip: { none: true },
+    stl: "none",
+    system_shared_libs: [],
+}
