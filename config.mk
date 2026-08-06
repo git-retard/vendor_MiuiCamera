@@ -26,47 +26,69 @@ RELAX_USES_LIBRARY_CHECK := true
 
 PRODUCT_PACKAGES += \
     MiuiCamera \
-    MiuiCameraOverlay \
     MiuiExtraPhoto
-    
-PRODUCT_PACKAGES += \
-    libcamera_algoup_jni_xiaomi \
-    libmialgoengine \
-    libcamera_jpegutil_jni_xiaomi \
-    libcamera_mianode_jni_xiaomi \
-    libdoc_photo_cxx_shared \
-    libdoc_photo \
-    libgallery_arcsoft_dualcam_refocus \
-    libgallery_arcsoft_portrait_lighting_c \
-    libgallery_arcsoft_portrait_lighting \
-    libgallery_mpbase \
-    libmegvii_bokeh_jni \
-    libmibokeh_gallery \
-    libmisr \
-    libmotion_photo_cxx_shared \
-    libmotion_photo_mace \
-    libmotion_photo \
-    librefocus_mibokeh \
-    librefocus \
-    libselection \
-    libwa_refocus_extraphoto
 
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.vendor.camera.enableAdvanceFeatures=0x3E7 \
-    persist.vendor.camera.multicam=TRUE \
-    persist.vendor.camera.multicam.fpsmatch=TRUE \
-    persist.vendor.camera.multicam.framesync=1 \
-    persist.vendor.camera.multicam.hwsync=TRUE \
-    persist.vendor.camera.privapp.list=com.android.camera \
-    persist.vendor.camera.picturesize.limit.enable=false \
-    ro.miui.notch=1 \
-    ro.miui.ui.version.code=13 \
-    ro.miui.ui.version.name=V130 \
-    ro.miui.region=CN \
-    ro.miui.build.region=cn \
-    ro.fota.oem=Xiaomi \
-    ro.boot.camera.config=_pro \
-    ro.com.google.lens.oem_camera_package=com.android.camera
+# Product files
+
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/MiuiCamera/product/etc/device_features/gauguin.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/gauguin.xml
+
+# System permissions
+
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/MiuiCamera/system/etc/permission/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuicamera.xml
+
+# System sysconfig
+
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/MiuiCamera/system/etc/sysconfig/miuicamera-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/miuicamera-hiddenapi-package-whitelist.xml
+
+# Public libraries
+
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/MiuiCamera/system/etc/public.libraries-xiaomi.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-xiaomi.txt
+
+# 32-bit libraries
+
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/MiuiCamera/system/lib/libcamera_algoup_jni.xiaomi.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcamera_algoup_jni.xiaomi.so \
+    vendor/xiaomi/MiuiCamera/system/lib/libcamera_jpegutil_jni.xiaomi.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcamera_jpegutil_jni.xiaomi.so \
+    vendor/xiaomi/MiuiCamera/system/lib/libcamera_mianode_jni.xiaomi.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcamera_mianode_jni.xiaomi.so
+
+# 64-bit libraries
+
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/MiuiCamera/system/lib64/libdoc_photo_c++_shared.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdoc_photo_c++_shared.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libdoc_photo.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdoc_photo.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libgallery_arcsoft_dualcam_refocus.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libgallery_arcsoft_dualcam_refocus.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libgallery_arcsoft_portrait_lighting_c.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libgallery_arcsoft_portrait_lighting_c.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libgallery_arcsoft_portrait_lighting.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libgallery_arcsoft_portrait_lighting.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libgallery_mpbase.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libgallery_mpbase.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libmegvii_bokeh_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmegvii_bokeh_jni.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libmibokeh_gallery.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmibokeh_gallery.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libmisr.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmisr.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libmotion_photo_c++_shared.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmotion_photo_c++_shared.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libmotion_photo_mace.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmotion_photo_mace.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libmotion_photo.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmotion_photo.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/librefocus_mibokeh.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/librefocus_mibokeh.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/librefocus.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/librefocus.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libselection.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libselection.so \
+    vendor/xiaomi/MiuiCamera/system/lib64/libwa_refocus_extraphoto.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libwa_refocus_extraphoto.so
+
+# Vendor permissions
+
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/MiuiCamera/vendor/etc/permission/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+    vendor/xiaomi/MiuiCamera/vendor/etc/permission/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
+    vendor/xiaomi/MiuiCamera/vendor/etc/permission/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
+    vendor/xiaomi/MiuiCamera/vendor/etc/permission/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
+
+# Thermal configs
+
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/MiuiCamera/vendor/etc/thermal-camera.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-camera.conf \
+    vendor/xiaomi/MiuiCamera/vendor/etc/thermal-india-camera.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-india-camera.conf \
+    vendor/xiaomi/MiuiCamera/vendor/etc/thermal-per-camera.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-per-camera.conf
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
